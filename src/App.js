@@ -24,6 +24,12 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Check that both username and password fields are filled out
+    if (!username || !password) {
+      alert("Please fill out both username and password fields.");
+      return;
+    }
+
     // Create new user object
     const newUser = {
       username: username,
